@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import {LandingPage} from '../containers';
 
 function HomePage(props) {
     return (
-        <div>
-            <h1>Home Page</h1>
-        </div>
+        <Fragment>
+            <header>
+                <title>StartFund</title>
+            </header>
+            <LandingPage />
+        </Fragment>
     );
 }
 
