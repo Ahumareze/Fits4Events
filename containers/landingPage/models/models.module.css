@@ -6,6 +6,8 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
 }
 .image{
     height: 200px;
@@ -15,4 +17,40 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.title{
+    font-size: 19px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    padding: 5px 0;
+}
+.userSection{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.userImage{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userDetails{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+}
+.userName{
+    display: flex;
+    flex-direction: row;
+}
+.userName p{
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
 }
