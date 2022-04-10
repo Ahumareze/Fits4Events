@@ -2,5 +2,28 @@
     height: 8vh;
     width: 100vw;
     background-color: #fff;
-    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid1, .grid2{
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid2{
+    justify-content: end;
+    padding-left: 15px;
+}
+.headerLinks{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    padding-left: 40px;
+    margin: 0;
+    margin-top: 3px;
+    cursor: pointer;
 }

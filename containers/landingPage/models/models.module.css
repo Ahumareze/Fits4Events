@@ -1,0 +1,18 @@
+.post{
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.image{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
