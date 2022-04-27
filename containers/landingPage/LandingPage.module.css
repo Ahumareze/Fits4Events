@@ -3,4 +3,5 @@
     width: 100vw;
     background-color: #fff;
     overflow: hidden;
+    overflow-y: scroll;
 }

@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat&display=swap');
 
-.Intro{
+.container{
     height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 15px;
-    box-sizing: border-box;
 }
-.grid1, .grid2{
+.container1{
     height: 100%;
     width: 100%;
-    /* border: 1px solid #000; */
 }
-.grid1 h1{
+.container2{
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+}
+.container2 h1{
     margin: 0;
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
@@ -21,14 +24,14 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.grid1 p{
+.container2 p{
     margin: 0;
     font-size: 20px;
     font-weight: 400;
     opacity: 0.65;
     padding-bottom: 25px;
 }
-.grid1 div{
+.container2 div{
     height: 40px;
     width: 160px;
     background-color: #fff;
@@ -42,13 +45,15 @@
     border: 1px solid #00acee;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    float: right;
 }
-.grid1 div:hover{
+.container2 div:hover{
     background: linear-gradient(270deg, #00ACEE 0%, #A2E1FA 101.89%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     color: #fff;
 }
 .canva{
-    height: 500px;
+    height: 100%;
     width: 100%;
+    border: 1px solid #000;
 }

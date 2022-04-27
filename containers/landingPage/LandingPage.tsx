@@ -6,6 +6,7 @@ import classes from './LandingPage.module.css';
 //components
 import Header from './header/Header';
 import Intro from './Intro/Intro';
+import Details from './Details/Details';
 
 
 function LandingPage(props) {
@@ -13,6 +14,7 @@ function LandingPage(props) {
         <div className={classes.LandingPage}>
             <Header />
             <Intro />
+            <Details />
         </div>
     );
 }
