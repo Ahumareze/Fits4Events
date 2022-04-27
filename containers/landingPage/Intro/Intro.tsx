@@ -4,7 +4,8 @@ import React from 'react';
 import classes from './Intro.module.css';
 
 //imported components
-import { Post } from '../models/models';
+import { BlueBall } from '../../../components';
+import Coursel from './Coursel';
 
 function Intro(props) {
     return (
@@ -15,7 +16,10 @@ function Intro(props) {
                 <div>Get Started</div>
             </div>
             <div className={classes.grid2}>
-                <Post />
+                <div className={classes.canva}>
+                    <BlueBall />
+                </div>
+                <Coursel />
             </div>
         </div>
     );

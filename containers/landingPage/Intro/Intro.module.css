@@ -4,7 +4,7 @@
     height: 500px;
     width: 100vw;
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 1fr 1fr;
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -48,6 +48,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     color: #fff;
 }
-.grid2{
-    padding-top: 50px;
+.canva{
+    height: 500px;
+    width: 100%;
 }

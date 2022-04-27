@@ -1,5 +1,8 @@
-import Logo from "./logo/logo";
+import Logo from "./logo/Logo";
+import { BlueBall, RedBall } from "./Balls/Balls";
 
 export {
-    Logo
+    Logo,
+    BlueBall,
+    RedBall
 }

@@ -1,5 +1,4 @@
 .post{
-    height: 400px;
     width: 300px;
     border-radius: 10px;
     background-color: #fff;
@@ -8,6 +7,18 @@
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
+    animation: slide-in 1s ease forwards;
+}
+@keyframes slide-in {
+    0%{transform: translateX(-200px); opacity: 0;}
+    100%{transform: translateX(0px); opacity: 1;}
+}
+.slideOut{
+    animation: slide-out 0.8s ease forwards;
+}
+@keyframes slide-out {
+    0%{transform: translateX(0px); opacity: 1;}
+    100%{transform: translateX(300px); opacity: 0;}
 }
 .image{
     height: 200px;
@@ -23,12 +34,13 @@
     font-weight: 500;
     color: #000;
     margin: 0;
-    padding: 5px 0;
+    padding: 8px 0;
 }
 .userSection{
     width: 100%;
     display: grid;
     grid-template-columns: 50px 1fr;
+    cursor: pointer;
 }
 .userImage{
     height: 40px;
@@ -42,15 +54,55 @@
 .userDetails{
     height: 100%;
     width: 100%;
-    border: 1px solid #000;
 }
 .userName{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .userName p{
     margin: 0;
     font-size: 16px;
     color: #000;
     font-weight: 500;
+    padding-right: 5px;
+}
+.userProfession{
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.6;
+}
+.bottom{
+    width: 100%;
+    /* border: 1px solid #000; */
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.viewButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+}
+.viewButton p{
+    margin: 0;
+    font-size: 17px;
+    color: #008ac0;
+    position: relative;
+    top: -2px;
+}
+.favourite{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    display: grid;
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+    color: rgb(75, 75, 75);
+}
+.favourite:hover{
+    background-color: #f0f0f0;
 }

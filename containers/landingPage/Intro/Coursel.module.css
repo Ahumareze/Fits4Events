@@ -1,0 +1,29 @@
+.main{
+    height: 500px;
+    width: 100%;
+    position: relative;
+    top: -500px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+}
+.buttonsContainer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    padding-top: 50px;
+    overflow: hidden;
+}
+.button{
+    height: 35px;
+    width: 35px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
