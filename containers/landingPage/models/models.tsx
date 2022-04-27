@@ -42,7 +42,16 @@ const Post:FC<PostsProps> = ({title, image, userData, active, slideOut}):JSX.Ele
 
 const Search = () => {
     return (
-        <div>Search</div>
+        <div className={classes.SearchContainer}>
+            <input className={classes.SearchBar} placeholder='Search Cities' />
+            <div>
+                <p>London, UK</p>
+                <p>Ukraine</p>
+                <p>Melbourne, Australia</p>
+                <p>New York, USA</p>
+                <p>Lagos, Nigeria</p>
+            </div>
+        </div>
     )
 }
 
