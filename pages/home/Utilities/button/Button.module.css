@@ -1,7 +1,6 @@
 .button{
     height: 45px;
     width: 180px;
-    border-radius: 7px;
     background-color: #F79D6E;
     display: grid;
     align-items: center;

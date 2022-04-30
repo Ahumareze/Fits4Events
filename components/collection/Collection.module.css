@@ -1,40 +1,23 @@
-.container{
-    height: 200px;
-    border: 1px solid palegreen;
-    display: grid;
-    grid-template-columns: 1fr 150px;
-}
-.imgContainer{
-    height: 100%;
+.image{
+    height: 300px;
     width: 100%;
-    border: 1px solid red;
+    background-color: rgb(53, 53, 53);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.titleContainer h4{
-    color: #fff;
+.container h4{
     font-size: 20px;
-    font-weight: 400;
-    margin: 0;
-    padding-left: 10px;
-}
-.titleContainer p{
-    font-size: 17px;
     color: #fff;
     font-weight: 400;
     margin: 0;
-    padding-top: 10px;
-    padding-left: 10px;
-    opacity: 0.6;
+    padding: 10px 0;
 }
-.imgBackground{
-    height: 100%;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-.backgroundBoard{
-    height: 150px;
-    width: 80%;
-    background-color: #E3CBAC;
-    border-radius: 20px;
+.container p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.7;
+    margin: 0;
+    cursor: pointer;
 }

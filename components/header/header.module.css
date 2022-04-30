@@ -2,7 +2,7 @@
     height: 50px;
     width: 100vw;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 100px 1fr;
     background-color: #1E1E22;
 }
 .logoContainer{

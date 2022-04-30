@@ -1,20 +1,25 @@
-import React from 'react';
+import Link from 'next/link';
+import React, {FC} from 'react';
 
 //styles
 import classes from './Collection.module.css';
 
-function Collection(props) {
+interface CollectionProps {
+    image: string,
+    title: string,
+    link: string
+}
+
+const Collection:FC<CollectionProps> = ({image, title, link}):JSX.Element => {
     return (
         <div className={classes.container}>
-            <div className={classes.imgContainer}>
-                <div className={classes.imgBackground}>
-                    <div className={classes.backgroundBoard} />
-                </div>
-            </div>
-            <div className={classes.titleContainer}>
-                <h4>Sunglasses</h4>
+            <Link href={link}>
+                <div className={classes.image} style={{backgroundImage: `url(${image})`}} />
+            </Link>
+            <h4>{title}</h4>
+            <Link href={'/collections'}>
                 <p>See all</p>
-            </div>
+            </Link>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 .Intro{
     width: 100%;
-    height: calc(100vh - 50px);
+    height: fit-content;
+    padding-bottom: 50px;
 }
 .Intro1{
     height: 100%;
