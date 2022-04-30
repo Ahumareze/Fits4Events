@@ -22,3 +22,9 @@
     margin: 0;
     font-weight: 400;
 }
+.mainIntro p{
+    color: #fff;
+    opacity: 0.7;
+    font-size: 25px;
+    font-weight: 25px;
+}
