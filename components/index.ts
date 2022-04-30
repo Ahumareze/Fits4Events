@@ -1,8 +1,7 @@
-import Logo from "./logo/Logo";
-import { BlueBall, RedBall } from "./Balls/Balls";
+import Header from "./header/Header";
+import Canva from "./canva/Canva";
 
 export {
-    Logo,
-    BlueBall,
-    RedBall
+    Header,
+    Canva
 }

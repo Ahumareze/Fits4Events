@@ -1,0 +1,22 @@
+.canva{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1E1E22;
+    overflow: hidden;
+}
+.mainCanva{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.mainCanva img{
+    height: 100vh;
+}
+.contents{
+    position: relative;
+    top: -100vh;
+    height: 100vh;
+    width: 100vw;
+}
