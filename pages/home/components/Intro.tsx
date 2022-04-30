@@ -5,8 +5,10 @@ import classes from './Intro.module.css';
 
 function Intro(props) {
     return (
-        <div className={classes.container}>
-            <div className={classes.box1}></div>
+        <div className={classes.Intro}>
+            <div className={classes.Intro1}>
+                <p>hello</p>
+            </div>
         </div>
     );
 }

@@ -1,7 +1,11 @@
-.container{
+.Intro{
     height: 400px;
     width: 100vw;
     border: 1px solid #fff;
-    background-color: red;
-    /* padding: 0 40px; */
+    padding: 0 40px;
+}
+.Intro1{
+    height: 100%;
+    width: 100%;
+    background-color: palegreen;
 }
