@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react';
 
+//styles
+import classes from './Home.module.css';
+
 //Components
-import { Canva, Header } from '../../components';
-import Intro from './components/intro';
+import { Canva, Collection, Header } from '../../components';
+import Intro from './components/Intro/Intro';
 
 function Home(props) {
     return (
@@ -12,7 +15,18 @@ function Home(props) {
             </header>
             <Canva>
                 <Header />
-                <Intro />
+                <section className={classes.section}>
+                    <Intro />
+                    <div className={classes.collections}>
+                        <h2>Collections</h2>
+                        <div className={classes.collectionsContainer}>
+                            <Collection />
+                            <Collection />
+                            <Collection />
+                            <Collection />
+                        </div>
+                    </div>
+                </section>
             </Canva>
         </Fragment>
     );

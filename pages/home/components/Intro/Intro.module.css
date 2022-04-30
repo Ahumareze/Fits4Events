@@ -1,0 +1,85 @@
+.Intro{
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+.Intro1{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 33% 67%;
+}
+.mainIntro{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid palegreen; */
+}
+.mainIntro h1{
+    font-size: 70px;
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
+}
+.mainIntro .description{
+    color: #fff;
+    opacity: 0.7;
+    font-size: 25px;
+    font-weight: 25px;
+    font-weight: 400;
+}
+.introExraDesign{
+    display: flex;
+    flex-direction: row;
+}
+.introExraDesign img{
+    position: relative;
+    top: -50px;
+    right: -100px;
+}
+.IntroImages{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.IntroImgDiv1{
+    height: 100%;
+    width: 100%;
+}
+.ball{
+    height: 80px;
+    position: relative;
+    bottom: -50px;
+}
+.x{
+    height: 80px;
+    position: relative;
+    float: right;
+    padding-right: 70px;
+}
+.main{
+    width: 70%;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.main2{
+    width: 65%;
+    cursor: pointer;
+}
+.main img{
+    width: 100%;
+}
+.main2 img{
+    width: 100%;
+}
+.main p, .main2 p{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+    top: -40px;
+    float: right;
+    padding-right: 15px;
+}
