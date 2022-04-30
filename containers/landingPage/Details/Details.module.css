@@ -62,7 +62,6 @@
     width: 100%;
     position: relative;
     top: -100%;
-    border: 1px solid #000;
     display: grid;
     justify-content: center;
     overflow: hidden;
