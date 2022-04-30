@@ -1,11 +1,24 @@
 .Intro{
     height: 400px;
     width: 100vw;
-    border: 1px solid #fff;
-    padding: 0 40px;
+    padding: 20px 20px;
 }
 .Intro1{
     height: 100%;
     width: 100%;
-    background-color: palegreen;
+    border: 1px solid palegreen;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 450px 1fr;
+}
+.mainIntro{
+    height: 100%;
+    width: 100%;
+    border: 1px solid palegreen;
+}
+.mainIntro h1{
+    font-size: 70px;
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
 }

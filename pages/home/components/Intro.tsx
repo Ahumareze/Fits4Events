@@ -7,7 +7,9 @@ function Intro(props) {
     return (
         <div className={classes.Intro}>
             <div className={classes.Intro1}>
-                <p>hello</p>
+                <div className={classes.mainIntro}>
+                    <h1>Every Outfit <br/>For<br/> Every Event</h1>
+                </div>
             </div>
         </div>
     );
