@@ -8,10 +8,10 @@ import { Canva, Collection, Header } from '../../components';
 import Intro from './components/Intro/Intro';
 
 //images
-const shirts = require('../../public/assets/shirts.jpg');
-const shoes = require('../../public/assets/sneakers.jpg');
-const scarves = require('../../public/assets/scarves.jpg');
-const jeans = require('../../public/assets/jeans.jpg');
+const img1 = require('../../public/assets/img1.jpg');
+const img2 = require('../../public/assets/img2.jpg');
+const img3 = require('../../public/assets/img3.jpg');
+const img4 = require('../../public/assets/img4.jpg');
 
 
 function Home(props) {
@@ -21,16 +21,16 @@ function Home(props) {
                 <title>Fits4Events</title>
             </header>
             <Canva>
-                <Header />
+                <Header active='' />
                 <section className={classes.section}>
                     <Intro />
                     <div className={classes.collections}>
                         <h2>Collections</h2>
                         <div className={classes.collectionsContainer}>
-                            <Collection title='Shirts' link='collection/shirts' image={shirts.default.src} />
-                            <Collection title='Sneakers' link='collection/shoes' image={shoes.default.src} />
-                            <Collection title='Jeans' link='collection/glasses' image={jeans.default.src} />
-                            <Collection title='Sneakers' link='collection/shirts' image={scarves.default.src} />
+                            <Collection title='Shirts' link='collection/shirts' image={img1.default.src} collectionPage={false} />
+                            <Collection title='Sneakers' link='collection/shoes' image={img2.default.src} collectionPage={false}/>
+                            <Collection title='Jackets' link='collection/glasses' image={img3.default.src} collectionPage={false}/>
+                            <Collection title='Sports' link='collection/shirts' image={img4.default.src} collectionPage={false}/>
                         </div>
                     </div>
                     <div className={classes.quickFits}></div>

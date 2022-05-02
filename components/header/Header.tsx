@@ -1,36 +1,40 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { FC } from 'react';
 
 //styles
 import classes from './header.module.css';
 
 //icons
-import {FiUser, FiShoppingBag, FiHeart} from 'react-icons/fi'
+import {FiUser, FiShoppingBag, FiHeart} from 'react-icons/fi';
 
-function Header(props) {
+interface HeaderProps{
+    active: string
+}
+
+const Header:FC<HeaderProps> = ({active}):JSX.Element => {
     return (
         <div className={classes.header}>
             <div className={classes.logoContainer}>
-                <p>Logo</p>
+                <Link href={'/'}><p style={{cursor: 'pointer'}}>Logo</p></Link>
             </div>
             <div className={classes.navigationContainer}>
-                <Link href={'/quickfits'}><p>Quick Fits</p></Link>
-                <Link href={'/collections'}><p>Collections</p></Link>
-                <Link href={'/men'}><p>Men</p></Link>
-                <Link href={'/women'}><p>Women</p></Link>
+                <Link href={'/quickfits'}><p  style={active === 'quickFits' ? {color: '#F79D6E'} : {}}>Quick Fits</p></Link>
+                <Link href={'/collections'}><p style={active === 'collections' ? {color: '#F79D6E'} : {}}>Collections</p></Link>
+                <Link href={'/collections/brands'}><p style={active === 'men' ? {color: '#F79D6E'} : {}}>Brands</p></Link>
+                <Link href={'/collections/women'}><p style={active === 'women' ? {color: '#F79D6E'} : {}}>Women</p></Link>
                 <Link href={'/favourites'}>
                     <div className={classes.icon}>
-                        <FiHeart color='#fff' size={20} />
+                        <FiHeart color={active === 'favoutites' ? '#F79D6E' : '#fff'} size={20} />
                     </div>
                 </Link>
                 <Link href={'/cart'}>
                     <div className={classes.icon}>
-                        <FiShoppingBag color='#fff' size={20} />
+                        <FiShoppingBag color={active === 'cart' ? '#F79D6E' : '#fff'} size={20} />
                     </div>
                 </Link>
                 <Link href={'/profile'}>
                     <div className={classes.icon}>
-                        <FiUser color='#fff' size={20} />
+                        <FiUser color={active === 'profile' ? '#F79D6E' : '#fff'} size={20} />
                     </div>
                 </Link>
             </div>
