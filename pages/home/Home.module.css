@@ -4,6 +4,7 @@
     padding: 20px 20px;
     overflow: hidden;
     overflow-y: scroll;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .collections{
     width: 100vw;
@@ -11,7 +12,7 @@
 .collections h2{
     color: #fff;
     margin: 0;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 400;
     margin-bottom: 30px;
 }

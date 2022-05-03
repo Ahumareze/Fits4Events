@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import classes from './Home.module.css';
 
 //Components
-import { Canva, Collection, Header } from '../../components';
+import { Canva, Collection, collections, Header } from '../../components';
 import Intro from './components/Intro/Intro';
 
 //images
@@ -27,10 +27,9 @@ function Home(props) {
                     <div className={classes.collections}>
                         <h2>Collections</h2>
                         <div className={classes.collectionsContainer}>
-                            <Collection title='Shirts' link='collection/shirts' image={img1.default.src} collectionPage={false} />
-                            <Collection title='Sneakers' link='collection/shoes' image={img2.default.src} collectionPage={false}/>
-                            <Collection title='Jackets' link='collection/glasses' image={img3.default.src} collectionPage={false}/>
-                            <Collection title='Sports' link='collection/shirts' image={img4.default.src} collectionPage={false}/>
+                            {collections.slice(0,4).map((i: any, idx: number) => (
+                                <Collection title={i.title} link={i.link} image={i.img} collectionPage={false} />
+                            ))}
                         </div>
                     </div>
                     <div className={classes.quickFits}></div>

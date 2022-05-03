@@ -7,7 +7,7 @@ import classes from './Collection.module.css';
 import { Canva, Collection, Header } from '../../components';
 
 //utilities
-import collections from './utilities/collections';
+import {collections} from '../../components';
 
 
 function Collections() {

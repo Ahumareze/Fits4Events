@@ -5,6 +5,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 300px 1fr;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .section .container{
     height: 100%;

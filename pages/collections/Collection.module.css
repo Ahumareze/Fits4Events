@@ -11,9 +11,10 @@
 .collections h2{
     color: #fff;
     margin: 0;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 400;
     margin-bottom: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .collectionsContainer{
     width: 100%;

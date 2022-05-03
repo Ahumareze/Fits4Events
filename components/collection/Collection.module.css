@@ -5,19 +5,22 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .container h4{
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
     font-weight: 400;
     margin: 0;
     padding: 10px 0;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .container p{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
     color: #fff;
     opacity: 0.7;
     margin: 0;
     cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
 }
