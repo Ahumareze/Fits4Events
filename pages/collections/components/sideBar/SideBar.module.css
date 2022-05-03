@@ -59,3 +59,36 @@
     height: 3px;
     border-radius: 2px;
 }
+.priceRange{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    padding-top: 10px;
+}
+.minPrice{
+    color: #fff;
+    font-size: 17px;
+    margin: 0;
+    width: 100%;
+    font-weight: 400;
+    opacity: 0.8;
+}
+.maxPrice{
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    font-size: 17px;
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.8;
+}
+.priceFilterDiv h3{
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 15px;
+}
+.filterItem{
+    padding-top: 20px;
+}

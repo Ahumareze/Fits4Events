@@ -1,0 +1,24 @@
+
+.image{
+    height: 300px;
+    width: 100%;
+    background-color: rgb(53, 53, 53);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.title{
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 400;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.price{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
