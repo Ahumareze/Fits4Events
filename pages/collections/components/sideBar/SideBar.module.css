@@ -1,6 +1,7 @@
 .sideBar{
     height: 100%;
     width: 100%;
+    padding-top: 20px;
 }
 .sideBar h2{
     color: #fff;
