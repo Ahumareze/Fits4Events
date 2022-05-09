@@ -27,7 +27,7 @@ const Header:FC<HeaderProps> = ({active}):JSX.Element => {
                         <FiHeart color={active === 'favoutites' ? '#F79D6E' : '#fff'} size={20} />
                     </div>
                 </Link>
-                <Link href={'/cart'}>
+                <Link href={'/shopping-bag'}>
                     <div className={classes.icon}>
                         <FiShoppingBag color={active === 'cart' ? '#F79D6E' : '#fff'} size={20} />
                     </div>
