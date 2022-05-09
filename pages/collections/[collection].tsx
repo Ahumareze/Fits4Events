@@ -31,7 +31,7 @@ function Collection(props) {
                     <SideBar collection={collection} />
                     <div className={classes.container}>
                         {data.map((i: any, idx: number) => (
-                            <Item title={i.title} price={i.price} image={i.image} key={idx} />
+                            <Item title={i.title} price={i.price} image={i.images[0]} key={i.id} id={i.id} />
                         ))}
                     </div>
                 </section>

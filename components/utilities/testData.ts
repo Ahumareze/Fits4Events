@@ -1,52 +1,40 @@
-const img1 = require('../../public/assets/images/1.jpg');
-const img2 = require('../../public/assets/images/2.jpg');
-const img3 = require('../../public/assets/images/3.jpg');
 const img4 = require('../../public/assets/images/4.jpg');
-const img5 = require('../../public/assets/images/5.jpg');
-const img6 = require('../../public/assets/images/6.jpg');
-const img7 = require('../../public/assets/images/7.jpg');
-const img8 = require('../../public/assets/images/8.jpg');
+const img9 = require('../../public/assets/images/9.jpg');
+const img11 = require('../../public/assets/images/11.jpg');
+const img12 = require('../../public/assets/images/12.jpg');
+const img13 = require('../../public/assets/images/13.jpg');
+const img14 = require('../../public/assets/images/14.jpg');
+const img15 = require('../../public/assets/images/15.jpg');
 
 const data = [
     {
-        title: "women black fendi jacket",
-        image: img1.default.src,
-        price: 120
+        title: "Chicago bulls men fan wear",
+        images: [
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072006/9_nora9u.jpg',
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072005/4_xha1xo.jpg'
+        ],
+        price: 120,
+        id: 0
     },
     {
-        title: "pink lavarel 100% cotton casual shirt",
-        image: img2.default.src,
-        price: 50
+        title: "Unisex martin x martin autum hoodie collection",
+        images: [
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072007/11_ydgsbp.jpg',
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072005/12_bczz2c.jpg',
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652113035/Capture_owd9cl.jpg',
+        ],
+        price: 255,
+        id: 1
     },
     {
-        title: "stylish martinxmartin long-sleeves",
-        image: img3.default.src,
-        price: 200
-    },
-    {
-        title: "chichago bulls fan ware t-shirt",
-        image: img4.default.src,
-        price: 75
-    },
-    {
-        title: "heavy black men long-sleeves 100% cotton",
-        image: img5.default.src,
-        price: 40
-    },
-    {
-        title: "charlette sweat-shirt",
-        image: img6.default.src,
-        price: 80
-    },
-    {
-        title: "kylie striped long-sleeves women seat shirt",
-        image: img7.default.src,
-        price: 300
-    },
-    {
-        title: "calvin klein black t-shirt",
-        image: img8.default.src,
-        price: 250
+        title: "Burberry orange print women casual hoodie",
+        images: [
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072007/13_ryvija.jpg',
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072006/14_mit0zy.jpg',
+            'https://res.cloudinary.com/ahumareze/image/upload/v1652072005/15_ua4jo3.jpg'
+        ],
+        price: 510,
+        id: 2
     }
 ];
 

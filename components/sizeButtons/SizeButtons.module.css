@@ -1,0 +1,30 @@
+.box{
+    height: 30px;
+    width: 30px;
+    background-color: #38383A;
+    border-radius: 4px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.box2{
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border-radius: 4px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0.4;
+    font-size: 15px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}

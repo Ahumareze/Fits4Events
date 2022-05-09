@@ -1,0 +1,88 @@
+.section{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    padding-top: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.main{
+    height: 100%;
+    width: 900px;
+    display: grid;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: 1fr 300px;
+}
+.detailsDiv{
+    height: 100%;
+    width: 100%;
+}
+.imagesContainer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;   
+}
+.miniImagesContainer{
+    height: 100%;
+    width: 100%;
+}
+.miniImagesContainer img{
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.largeImageContainer{
+    height: calc(100vh - 70px);
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.largeImageContainer img{
+    width: 100%;
+}
+.title{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.8;
+}
+.price{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.sizeContainer{
+    display: flex;
+    flex-direction: row;
+}
+.bottom{
+    height: 40px;
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+}
+.favButton{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    opacity: 0.8;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.favButton:hover{
+    opacity: 1;
+}
+.favButtonContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
