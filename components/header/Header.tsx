@@ -20,7 +20,7 @@ const Header:FC<HeaderProps> = ({active}):JSX.Element => {
             <div className={classes.navigationContainer}>
                 <Link href={'/quickfits'}><p  style={active === 'quickFits' ? {color: '#F79D6E'} : {}}>Quick Fits</p></Link>
                 <Link href={'/collections'}><p style={active === 'collections' ? {color: '#F79D6E'} : {}}>Collections</p></Link>
-                <Link href={'/collections/brands'}><p style={active === 'men' ? {color: '#F79D6E'} : {}}>Brands</p></Link>
+                <Link href={'/collections/men'}><p style={active === 'men' ? {color: '#F79D6E'} : {}}>Men</p></Link>
                 <Link href={'/collections/women'}><p style={active === 'women' ? {color: '#F79D6E'} : {}}>Women</p></Link>
                 <Link href={'/favourites'}>
                     <div className={classes.icon}>

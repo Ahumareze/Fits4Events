@@ -14,6 +14,12 @@ const data = [
             'https://res.cloudinary.com/ahumareze/image/upload/v1652072005/4_xha1xo.jpg'
         ],
         price: 120,
+        sizes: [
+            's',
+            'm',
+            'l',
+            'xl'
+        ],
         id: 0
     },
     {
@@ -24,6 +30,12 @@ const data = [
             'https://res.cloudinary.com/ahumareze/image/upload/v1652113035/Capture_owd9cl.jpg',
         ],
         price: 255,
+        sizes: [
+            's',
+            'm',
+            'l',
+            'xl'
+        ],
         id: 1
     },
     {
@@ -34,6 +46,12 @@ const data = [
             'https://res.cloudinary.com/ahumareze/image/upload/v1652072005/15_ua4jo3.jpg'
         ],
         price: 510,
+        sizes: [
+            's',
+            'm',
+            'l',
+            'xl'
+        ],
         id: 2
     }
 ];

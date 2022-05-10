@@ -43,7 +43,10 @@ function Product(props) {
     const fetchData = (id) => {
         const item = data[id];
         setProduct(item);
-        setMainImage(item.images[0])
+        setMainImage(item.images[0]);
+
+        if(!item.sizes) return;
+        setSize(item.sizes[0])
     }
 
 
@@ -58,9 +61,9 @@ function Product(props) {
                     <div className={classes.main}>
                         <div className={classes.imagesContainer}>
                             <div className={classes.miniImagesContainer}>
-                                { product?.images.map((i: string) => (
+                                {product?.images.map((i: string) => (
                                     <img src={i} onClick={() => setMainImage(i)} />
-                                )) }
+                                ))}
                             </div>
                             <div className={classes.largeImageContainer}>
                                 <img src={mainImage} />
@@ -70,10 +73,9 @@ function Product(props) {
                             <p className={classes.title}>{product?.title}</p>
                             <p className={classes.price}>${product?.price}</p>
                             <div className={classes.sizeContainer}>
-                                {/* <SizeButtons size='s' selected={size === 's'} select={(e) => setSize(e)} />
-                                <SizeButtons size='m' selected={size === 'm'} select={(e) => setSize(e)}/>
-                                <SizeButtons size='l' selected={size === 'l'} select={(e) => setSize(e)}/>
-                                <SizeButtons size='xl' selected={size === 'xl'} select={(e) => setSize(e)}/> */}
+                                {product?.sizes.map((i: string) => (
+                                    <SizeButtons size={i} selected={size === i} select={(e) => setSize(e)} />
+                                ))}
                             </div>
                             <div className={classes.bottom}>
                                 <Button text='Add To Bag'>
