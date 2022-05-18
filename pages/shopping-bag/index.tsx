@@ -6,7 +6,7 @@ import { Button, Canva, Header } from '../../components';
 import classes from './shoppingBag.module.css';
 
 function index(props) {
-    const [deliveryFee, setDeliveryFee] = useState();
+    const [deliveryFee, setDeliveryFee] = useState<string>();
 
     return (
         <Fragment>
@@ -30,7 +30,7 @@ function index(props) {
                                 <p className={classes.p1}>Delivery-fee</p>
                                 <p className={classes.p3}>${deliveryFee}</p>
                             </div>
-                            <select onClick={(e) => setDeliveryFee(e.target.value)}>
+                            <select onClick={(e) => setDeliveryFee((e.target as HTMLTextAreaElement).value)}>
                                 <option value={15}>Standard delivery outside Nigeria</option>
                                 <option value={35}>Fast delivery outside Nigeria</option>
                             </select>
