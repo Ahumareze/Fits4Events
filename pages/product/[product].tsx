@@ -18,9 +18,11 @@ function Product(props) {
     //states
     const [productTitle, setProduceTitle] = useState<string>();
     const [product, setProduct] = useState<any>();
+    const [price, setPrice] = useState<number>()
 
     const [mainImage, setMainImage] = useState<any>()
     const [size, setSize] = useState<string>();
+    const [quantity, setQuantity] = useState<number>(1);
 
     useEffect(() => {
         if(!router.isReady) return;
@@ -42,11 +44,23 @@ function Product(props) {
 
     const fetchData = (id) => {
         const item = data[id];
+
         setProduct(item);
         setMainImage(item.images[0]);
+        setPrice(item.price);
 
         if(!item.sizes) return;
         setSize(item.sizes[0])
+    };
+
+    const updateQuantity = (type: string) => {
+        if(type === '+'){
+            if(quantity > 4) return;
+            setQuantity(prev => prev + 1)
+        }else{
+            if(quantity == 1) return;
+            setQuantity(prev => prev - 1)
+        }
     }
 
 
@@ -71,11 +85,22 @@ function Product(props) {
                         </div>
                         <div className={classes.detailsDiv}>
                             <p className={classes.title}>{product?.title}</p>
-                            <p className={classes.price}>${product?.price}</p>
+                            <p className={classes.price}>${price * quantity}</p>
                             <div className={classes.sizeContainer}>
                                 {product?.sizes.map((i: string) => (
                                     <SizeButtons size={i} selected={size === i} select={(e) => setSize(e)} />
                                 ))}
+                            </div>
+                            <div className={classes.quantity}>
+                                <div className={classes.addBox} onClick={() => updateQuantity('-')}>
+                                    <p>-</p>
+                                </div>
+                                <div className={classes.NumberBox}>
+                                    <p>{quantity}</p>
+                                </div>
+                                <div className={classes.addBox} onClick={() => updateQuantity('+')}>
+                                    <p>+</p>
+                                </div>
                             </div>
                             <div className={classes.bottom}>
                                 <Button text='Add To Bag'>

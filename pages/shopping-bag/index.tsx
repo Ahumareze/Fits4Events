@@ -1,12 +1,17 @@
 import React, { Fragment, useState } from 'react';
+
+//icons
 import { FiCreditCard } from 'react-icons/fi';
+
+//components
 import { Button, Canva, Header } from '../../components';
+import Items from './components/Items/Items';
 
 //styles
 import classes from './shoppingBag.module.css';
 
 function index(props) {
-    const [deliveryFee, setDeliveryFee] = useState<string>();
+    const [deliveryFee, setDeliveryFee] = useState<any>(15);
 
     return (
         <Fragment>
@@ -19,6 +24,9 @@ function index(props) {
                     <div className={classes.main}>
                         <div className={classes.itemsContainer}>
                             <h3>My Bag</h3>
+                            <Items />
+                            <Items />
+                            <Items />
                         </div>
                         <div className={classes.totalContainer}>
                             <h3>Total</h3>

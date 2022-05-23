@@ -22,9 +22,9 @@ const Header:FC<HeaderProps> = ({active}):JSX.Element => {
                 <Link href={'/collections'}><p style={active === 'collections' ? {color: '#F79D6E'} : {}}>Collections</p></Link>
                 <Link href={'/collections/men'}><p style={active === 'men' ? {color: '#F79D6E'} : {}}>Men</p></Link>
                 <Link href={'/collections/women'}><p style={active === 'women' ? {color: '#F79D6E'} : {}}>Women</p></Link>
-                <Link href={'/favourites'}>
+                <Link href={'/saved'}>
                     <div className={classes.icon}>
-                        <FiHeart color={active === 'favoutites' ? '#F79D6E' : '#fff'} size={20} />
+                        <FiHeart color={active === 'saved' ? '#F79D6E' : '#fff'} size={20} />
                     </div>
                 </Link>
                 <Link href={'/shopping-bag'}>

@@ -4,6 +4,8 @@ import Button from "./button/Button";
 import Collection from "./collection/Collection";
 import collections from "./utilities/collections";
 import SizeButtons from "./sizeButtons/SizeButtons";
+import Item from "./item/Item";
+import Input from "./input/Input";
 
 export {
     Header,
@@ -11,5 +13,7 @@ export {
     Button,
     Collection,
     collections,
-    SizeButtons
+    SizeButtons,
+    Item,
+    Input
 }

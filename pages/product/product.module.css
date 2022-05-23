@@ -86,3 +86,43 @@
     align-items: flex-end;
     justify-content: flex-end;
 }
+.quantity{
+    height: 30px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.addBox{
+    height: 30px;
+    width: 30px;
+    background-color: #F79D6E;
+    border-radius: 3px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+.addBox p{
+    margin: 0;
+    margin-top: -5px;
+    font-size: 20px;
+}
+.NumberBox{
+    height: 30px;
+    width: 30px;
+    background-color: #38383A;
+    border-radius: 3px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 25px;
+}
+.NumberBox p{
+    margin: 0;
+    margin-top: -5px;
+    font-size: 17px;
+}

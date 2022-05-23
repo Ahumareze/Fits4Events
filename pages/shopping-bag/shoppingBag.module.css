@@ -13,12 +13,12 @@
     margin-right: auto;
     margin-left: auto;
     grid-template-columns: 1fr 300px;
-    column-gap: 1rem;
+    column-gap: 2rem;
 }
 .itemsContainer{
     height: 100%;
     width: 100%;
-    border: 1px solid red;
+    padding-bottom: 50px;
 }
 .totalContainer{
     width: 100%;
@@ -41,6 +41,7 @@
     font-size: 22px;
     margin: 0;
     font-weight: 400;
+    opacity: 0.9;
 }
 .totalDivs .p2, .totalDivs .p3{
     color: #fff;
