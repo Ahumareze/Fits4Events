@@ -3,7 +3,8 @@ import React, { Fragment, useState } from 'react';
 //icons
 import { FiCreditCard } from 'react-icons/fi';
 
-//components
+//
+import {useSelector} from 'react-redux';
 import { Button, Canva, Header } from '../../components';
 import Items from './components/Items/Items';
 
@@ -12,6 +13,10 @@ import classes from './shoppingBag.module.css';
 
 function index(props) {
     const [deliveryFee, setDeliveryFee] = useState<any>(15);
+
+    const loading = useSelector((state:any) => state.storeReducer.loading);
+    console.log(loading)
+
 
     return (
         <Fragment>

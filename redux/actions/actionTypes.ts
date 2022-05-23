@@ -1,5 +1,5 @@
-const FETCHITEMS = 'FETCHITEMS';
+const LOADING = 'LOADING';
 
 export {
-    FETCHITEMS
+    LOADING
 }
