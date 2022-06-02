@@ -2,4 +2,40 @@
     height: 50px;
     width: 100%;
     background-color: #2e2e2e;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 50px 1fr 30px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.container:hover{
+    background-color: #3a3a3a;
+}
+.iconContainer{
+    height: 30px;
+    width: 30px;
+    /* background-color: #ffa2b2; */
+    background-color: #F79D6E;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.container P{
+    margin: 0;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 18px;
+}
+.arrowButton{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0.8;
 }

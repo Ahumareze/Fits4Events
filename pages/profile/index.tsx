@@ -8,6 +8,7 @@ import Items from './components/items/Items';
 
 //styles
 import classes from './profile.module.css';
+import { FiCreditCard, FiDollarSign, FiInfo, FiLogOut } from 'react-icons/fi';
 
 
 function index(props) {
@@ -33,8 +34,23 @@ function index(props) {
                         <UserDetails />
                         <div className={classes.accountsettings}>
                             <h3>Account Settings</h3>
-                            <Items />
+                            <Items title={'Change Currency (NGN)'} color='#F79D6E'>
+                                <FiDollarSign />
+                            </Items>
+                            <Items title={'Add New Payment Card'} color='#4B6AE3'>
+                                <FiCreditCard />
+                            </Items>
+                            <Items title={'Update Billing Address'} color='#ffa2b2'>
+                                <FiInfo />
+                            </Items>
+                            <Items title={'Sign Out'} color='#ff4848'>
+                                <FiLogOut />
+                            </Items>
                         </div>
+                    </div>
+                    <div className={classes.historyDiv}>
+                        <h3>History</h3>
+                        <p>A list of purchases made with this account will appear here</p>
                     </div>
                 </section>
             </Canva>

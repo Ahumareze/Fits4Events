@@ -1,11 +1,14 @@
 .section{
     height: calc(100vh - 50px);
-    width: 100vw;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 20px 20px;
     overflow: hidden;
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
 }
 .mainProfile{
     height: 100%;
@@ -14,14 +17,21 @@
 .accountsettings{
     height: 300px;
     width: 100%;
-    border: 1px solid #fff;
-    margin-top: 30px;
+    /* border: 1px solid #fff; */
+    margin-top: 40px;
 }
-.accountsettings h3{
+.accountsettings h3, .historyDiv h3{
     color: #fff;
     margin: 0;
     font-weight: 600;
     letter-spacing: 1px;
     opacity: 0.9;
     font-size: 22px;
+    margin-bottom: 30px;
+}
+.historyDiv p{
+    margin: 0;
+    columns: #fff;
+    margin-top: 10px;
+    font-size: 20px;
 }
