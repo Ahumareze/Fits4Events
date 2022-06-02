@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 
 //styles
@@ -17,6 +17,9 @@ import Modal from './components/modal/Modal';
 
 
 function index(props) {
+    //UI state
+    const [modal, setModal] = useState<string>()
+
     useEffect(() => {
         const localId = localStorage.getItem('@fitsUserData');
         if(localId){
@@ -39,16 +42,16 @@ function index(props) {
                         <UserDetails />
                         <div className={classes.accountsettings}>
                             <h3>Account Settings</h3>
-                            <Items title={'Change Currency (NGN)'} color='#F79D6E'>
+                            <Items title={'Change Currency (NGN)'} color='#F79D6E' onClick={() => setModal('currency')}>
                                 <FiDollarSign />
                             </Items>
-                            <Items title={'Add New Payment Card'} color='#4B6AE3'>
+                            <Items title={'Add New Payment Card'} color='#4B6AE3' onClick={() => setModal('currency')}>
                                 <FiCreditCard />
                             </Items>
-                            <Items title={'Update Billing Address'} color='#ffa2b2'>
+                            <Items title={'Update Billing Address'} color='#ffa2b2' onClick={() => setModal('currency')}>
                                 <FiInfo />
                             </Items>
-                            <Items title={'Sign Out'} color='#ff4848'>
+                            <Items title={'Sign Out'} color='#ff4848' onClick={() => setModal('currency')}>
                                 <FiLogOut />
                             </Items>
                         </div>
@@ -59,7 +62,7 @@ function index(props) {
                     </div>
                 </section>
             </Canva>
-            {/* <Modal /> */}
+            {modal && <Modal />}
         </Fragment>
     );
 }
