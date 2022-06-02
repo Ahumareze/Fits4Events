@@ -1,10 +1,11 @@
 import React from 'react';
 
 //styles
+import classes from './Items.module.css';
 
 function Items(props) {
     return (
-        <div>
+        <div className={classes.container}>
             
         </div>
     );

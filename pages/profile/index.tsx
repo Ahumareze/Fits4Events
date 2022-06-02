@@ -4,6 +4,7 @@ import React, { Fragment, useEffect } from 'react';
 import Router from 'next/router';
 import { Canva, Header } from '../../components';
 import UserDetails from './components/userDetails/UserDetails';
+import Items from './components/items/Items';
 
 //styles
 import classes from './profile.module.css';
@@ -32,6 +33,7 @@ function index(props) {
                         <UserDetails />
                         <div className={classes.accountsettings}>
                             <h3>Account Settings</h3>
+                            <Items />
                         </div>
                     </div>
                 </section>
