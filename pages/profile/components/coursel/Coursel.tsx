@@ -30,7 +30,11 @@ function Coursel(props) {
         <div className={classes.container}>
             <div className={classes.div1} style={{backgroundImage: `url(${active !== 0 ? data[active - 1] : data[2]})`}}>
                 {data.map((i: string, idx: number) => (
-                    <div className={active === idx ? classes.activeImage : classes.image} style={{backgroundImage: `url(${i})`}} />
+                    <div 
+                        className={active === idx ? classes.activeImage : classes.image} 
+                        style={{backgroundImage: `url(${i})`}} 
+                        key={idx}
+                    />
                 ))}
             </div>
             <div className={classes.div2}>

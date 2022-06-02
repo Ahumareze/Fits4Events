@@ -1,0 +1,54 @@
+.container{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.div1{
+    height: 100%;
+    width: 100%;
+}
+.div2{
+    height: 100%;
+    width: 100%;
+}
+.form{
+    height: 500px;
+    width: 350px;
+    margin: 0 auto;
+}
+.form h1{
+    color: #fff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.button{
+    height: 40px;
+    width: 100%;
+    background-color: #F79D6E;
+    color: #fff;
+    font-size: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.button:hover{
+    background-color: #f88344;
+}
+.terms{
+    color: #fff;
+    margin: 20px 0;
+}
+.terms span, .account span{
+    color: #F79D6E;
+    cursor: pointer;
+}
+.account{
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}

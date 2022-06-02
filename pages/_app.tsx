@@ -1,16 +1,20 @@
 import '../styles/globals.css';
+import { StrictMode } from 'react';
 
 //redux components
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+// import {createWrapper} from 'next-redux-wrapper'
+
 
 //reducers
 import storeReducer from '../redux/reducers/storeReducer';
 
+
 const rootReducer = combineReducers({
-  storeReducer: storeReducer
+  storeReducer,
 })
 
 const store = createStore(
@@ -22,7 +26,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-        <Component {...pageProps} />
+        <StrictMode>
+          <Component {...pageProps} />
+        </StrictMode>
       </Provider>
     </>
   )

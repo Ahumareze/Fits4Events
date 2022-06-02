@@ -47,6 +47,15 @@
 .favButton:hover{
     opacity: 1;
 }
+.favButton img{
+    height: 20px;
+    animation: bounce 1s ease forwards;
+}
+@keyframes bounce {
+    0%{transform: scale(1);}
+    50%{transform: scale(2);}
+    100%{transform: scale(1);}
+}
 .itemLink{
     height: 100%;
     width: 100%;

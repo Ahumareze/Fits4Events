@@ -5,12 +5,13 @@ import classes from './Button.module.css';
 
 interface ButtonProps{
     text: string,
-    children: any
+    children: any,
+    onClick: () => void
 }
 
-const Button:FC<ButtonProps> = ({text, children}):JSX.Element => {
+const Button:FC<ButtonProps> = ({text, children, onClick}):JSX.Element => {
     return (
-        <div className={classes.button}>
+        <div className={classes.button} onClick={onClick}>
             <p>{text}</p>
             {children}
         </div>

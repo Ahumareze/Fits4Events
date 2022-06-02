@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 //styles
 import classes from './Item.module.css';
@@ -6,27 +6,59 @@ import classes from './Item.module.css';
 //icons
 import {FiHeart, FiShoppingBag, FiTrash} from 'react-icons/fi';
 import Link from 'next/link';
+const saved = require('../../public/assets/heart.png');
 
 interface ItemProps{
     image: string,
     title: string,
     price: number,
+    data: any,
     id: any,
-    isDelete: boolean
+    isDelete: boolean,
+    removeItem: () => void,
+    addToCart: () => void,
 }
 
-const Item:FC<ItemProps> = ({image, title, price, id, isDelete}) => {
+const Item:FC<ItemProps> = ({data, image, title, price, id, isDelete, removeItem, addToCart}) => {
+    //state
+    const [isSaved, setIsSaved] = useState(false);
+
+    //fetch saved items from localstorage
+    useEffect(() => {
+        const getSavedItems = localStorage.getItem('@Saved');
+        if(getSavedItems){
+            const savedItems = JSON.parse(getSavedItems);
+            const isInArray = savedItems.find(function(el){ return el._id === id }) !== undefined;
+            if(isInArray){
+                setIsSaved(true)
+            }
+        }
+    }, []);
+
+    //add item saved items
+    const saveItem = async() => {
+        const localSavedItems = await localStorage.getItem('@Saved');
+        setIsSaved(true)
+        if(localSavedItems){
+            const parsedData = JSON.parse(localSavedItems);
+            const newData = [...parsedData, data];
+            localStorage.setItem('@Saved', JSON.stringify(newData))
+        }else{
+            const newData = [data];
+            localStorage.setItem('@Saved', JSON.stringify(newData))
+        }
+    }
 
     let button;
     if(!isDelete){
         button = (
             <div className={classes.favButton}>
-                <FiHeart color='#000' size={20} />
+                {!isSaved ? <FiHeart color='#000' size={20} onClick={() => saveItem()} /> : <img src={saved.default.src} />}
             </div>
         )
     }else{
         button = (
-            <div className={classes.favButton}>
+            <div className={classes.favButton} onClick={() => removeItem()}>
                 <FiTrash color='#000' size={20} />
             </div>
         )
@@ -35,7 +67,7 @@ const Item:FC<ItemProps> = ({image, title, price, id, isDelete}) => {
     let bottom;
     if(isDelete){
         bottom = (
-            <div className={classes.moveToBag}>
+            <div className={classes.moveToBag} onClick={() => addToCart()}>
                 <p>Add To Bag</p>
                 <FiShoppingBag color='#fff' size={20} />
             </div>

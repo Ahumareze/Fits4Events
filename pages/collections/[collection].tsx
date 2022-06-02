@@ -1,43 +1,57 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 
 //styles
 import classes from './collections.module.css';
 
 //components
-import {useRouter} from 'next/router';
-import { Canva, Header } from '../../components';
+import { Canva, collections, Header, link } from '../../components';
 import SideBar from './components/sideBar/SideBar';
 import Item from '../../components/item/Item';
+import axios from 'axios';
 
-//icons
-import { FiSearch } from 'react-icons/fi';
+export async function getServerSideProps(context) {
 
-//test data
-import data from '../../components/utilities/testData';
+    const route = await context.params.collection;
+    const res = await axios.post(link + '/get-item', {section: route}).then(r => {return r.data}).catch(e => {return null});
+
+    const data = await res;
+    
+    return{
+        props: {data, route}
+    };
+
+}
 
 
-function Collection(props) {
-    const router = useRouter();
-    const collection = router.query.collection;
-
+function Collection({data, route}) {
     return (
         <Fragment>
             <header>
-                <title>{collection}</title>
+                <title>Fits4Event</title>
             </header>
             <Canva>
                 <Header active='collections' />
                 <section className={classes.section}>
-                    <SideBar collection={collection} />
+                    <SideBar collection={route} />
                     <div className={classes.container}>
                         {data.map((i: any, idx: number) => (
-                            <Item title={i.title} price={i.price} image={i.images[0]} key={i.id} id={i.id} />
+                            <Item 
+                                data={i}
+                                title={i.name} 
+                                price={i.price} 
+                                image={i.images[0]} 
+                                isDelete={false}
+                                key={i._id} 
+                                id={i._id} 
+                                removeItem={() => console.log()}
+                                addToCart={() => console.log()}
+                            />
                         ))}
                     </div>
                 </section>
             </Canva>
         </Fragment>
-    );
-}
+    )
+};
 
 export default Collection;

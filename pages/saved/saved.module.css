@@ -23,3 +23,10 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
+.slideOut{
+    animation: slideOut 1s ease forwards;
+}
+@keyframes slideOut {
+    0%{transform: scale(1); opacity: 1;}
+    100%{transform: scale(0); opacity: 0;}
+}

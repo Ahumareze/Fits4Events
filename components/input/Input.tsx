@@ -17,14 +17,14 @@ const Input:FC<InputProps> = ({title, value, onChange}):JSX.Element => {
     if(title === 'Password'){
         container = (
             <div className={classes.inputContainer}>
-                <input type={secure ? 'password' : 'text'} value={value} onChange={(e) => onChange(e.target.value)} />
+                <input type={secure ? 'password' : 'text'} onChange={(e) => onChange(e.target.value)} />
                 <div className={classes.iconContainer}>
                     {secure ? <FiEye className={classes.icon} onClick={() => setSecure(prev => !prev)} /> : <FiEyeOff className={classes.icon} onClick={() => setSecure(prev => !prev)} />}
                 </div>
             </div>
         )
     }else{
-        container = <input className={classes.mainInput} />
+        container = <input className={classes.mainInput} onChange={(e) => onChange(e.target.value)} />
     }
 
     return (

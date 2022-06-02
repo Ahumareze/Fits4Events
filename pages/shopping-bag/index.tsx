@@ -1,22 +1,62 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 //icons
 import { FiCreditCard } from 'react-icons/fi';
 
 //
 import {useSelector} from 'react-redux';
-import { Button, Canva, Header } from '../../components';
+import { Button, Canva, EmptyPage, Header } from '../../components';
 import Items from './components/Items/Items';
 
 //styles
 import classes from './shoppingBag.module.css';
 
-function index(props) {
+function index() {
+    //state
+    const [total, setTotal] = useState(0);
     const [deliveryFee, setDeliveryFee] = useState<any>(15);
 
-    const loading = useSelector((state:any) => state.storeReducer.loading);
-    console.log(loading)
+    const [cart, setCart] = useState([]);
+    const [removedItem, setRemovedItem] = useState();
 
+    useEffect(() => {
+        fetchCartData();
+    }, []);
+
+    //calculating the total price of items
+    useEffect(() => {
+        let num = 0;
+        cart?.forEach(el => {
+            num = el.price + num
+        });
+        setTotal(num)
+    }, [cart])
+
+    const fetchCartData = async () => {
+        //fetch cart data from local storage
+        const data = await localStorage.getItem('@Cart');
+        if(data){
+            const parsedCart = JSON.parse(data);
+            setCart(parsedCart);
+        }
+    }
+
+    //remove item from cart
+    const removeItem = (position) => {
+        setRemovedItem(position);
+        
+        //settimeout is for animation to render before running code
+        setTimeout(() => {
+            setRemovedItem(null);
+
+            let arr = cart;
+            arr.splice(position, 1);
+            const newArr = [...arr];
+            setCart(newArr);
+            localStorage.setItem('@Cart', JSON.stringify(newArr))
+        }, 1000)
+        
+    }
 
     return (
         <Fragment>
@@ -29,15 +69,16 @@ function index(props) {
                     <div className={classes.main}>
                         <div className={classes.itemsContainer}>
                             <h3>My Bag</h3>
-                            <Items />
-                            <Items />
-                            <Items />
+                            {cart.map((i,idx) => (
+                                <Items data={{...i, idx: idx}} key={idx} onClick={() => removeItem(idx)} removedItem={removedItem}  />
+                            ))}
+                            {cart.length === 0 && <EmptyPage saved={false} />}
                         </div>
                         <div className={classes.totalContainer}>
                             <h3>Total</h3>
                             <div className={classes.totalDivs}>
                                 <p className={classes.p1}>Sub-total</p>
-                                <p className={classes.p2}>$400</p>
+                                <p className={classes.p2}>${total}</p>
                             </div>
                             <div className={classes.totalDivs}>
                                 <p className={classes.p1}>Delivery-fee</p>
@@ -47,7 +88,7 @@ function index(props) {
                                 <option value={15}>Standard delivery outside Nigeria</option>
                                 <option value={35}>Fast delivery outside Nigeria</option>
                             </select>
-                            <Button text='Proceed to Checkout'>
+                            <Button text='Proceed to Checkout' onClick={() => console.log('proceed to checkout')}>
                                 <FiCreditCard color='#fff' size={20} />
                             </Button>
                         </div>

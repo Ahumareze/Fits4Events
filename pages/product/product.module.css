@@ -47,6 +47,7 @@
     font-weight: 400;
     margin: 0;
     opacity: 0.8;
+    text-transform: capitalize;
 }
 .price{
     font-size: 24px;

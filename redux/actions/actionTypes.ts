@@ -1,5 +1,7 @@
-const LOADING = 'LOADING';
+const ADDTOCART = 'ADDTOCART';
+const SHOWADDMODAL = 'SHOWADDMODAL';
 
 export {
-    LOADING
+    ADDTOCART,
+    SHOWADDMODAL
 }

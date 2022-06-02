@@ -6,6 +6,14 @@ import collections from "./utilities/collections";
 import SizeButtons from "./sizeButtons/SizeButtons";
 import Item from "./item/Item";
 import Input from "./input/Input";
+import link from "./utilities/api";
+import Notification from "./notification/Notification";
+import EmptyPage from "./emptyPage/EmptyPage";
+
+//animations
+import { AddedToCart } from "./animations/Animations";
+import Loader from "./Loader/Loader";
+
 
 export {
     Header,
@@ -15,5 +23,10 @@ export {
     collections,
     SizeButtons,
     Item,
-    Input
+    Input,
+    link,
+    AddedToCart,
+    Notification,
+    EmptyPage,
+    Loader
 }

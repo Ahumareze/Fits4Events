@@ -14,7 +14,7 @@ const collections = [
     {title: 'Shoes', link: '/collections/shoes', img: shoes},
     {title: 'Jackets', link: '/collections/jackets', img: jackets},
     {title: 'Sports', link: '/collections/sports', img: sports},
-    {title: 'Sweat Shirts', link: '/collections/sweat-shirts', img: sweatshirts},
+    {title: 'Sweat Shirts', link: '/collections/sweatshirts', img: sweatshirts},
     {title: 'Kids', link: '/collections/kids', img: kids},
     {title: 'Glasses', link: '/collections/glasses', img: glasses},
     {title: 'Watches', link: '/collections/watches', img: watches},
