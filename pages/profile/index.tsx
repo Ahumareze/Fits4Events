@@ -1,14 +1,19 @@
 import React, { Fragment, useEffect } from 'react';
 
+
+//styles
+import classes from './profile.module.css';
+
+
+//icons
+import { FiCreditCard, FiDollarSign, FiInfo, FiLogOut } from 'react-icons/fi';
+
 //components
 import Router from 'next/router';
 import { Canva, Header } from '../../components';
 import UserDetails from './components/userDetails/UserDetails';
 import Items from './components/items/Items';
-
-//styles
-import classes from './profile.module.css';
-import { FiCreditCard, FiDollarSign, FiInfo, FiLogOut } from 'react-icons/fi';
+import Modal from './components/modal/Modal';
 
 
 function index(props) {
@@ -50,10 +55,11 @@ function index(props) {
                     </div>
                     <div className={classes.historyDiv}>
                         <h3>History</h3>
-                        <p>A list of purchases made with this account will appear here</p>
+                        <p className={classes.historyDivP}>A list of your purchases will appear here</p>
                     </div>
                 </section>
             </Canva>
+            {/* <Modal /> */}
         </Fragment>
     );
 }
