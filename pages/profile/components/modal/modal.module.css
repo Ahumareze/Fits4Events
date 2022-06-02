@@ -33,6 +33,9 @@
     column-gap: 15px;
     padding-top: 30px;
 }
+.flag{
+    width: 20px;
+}
 .bottom{
     height: 50px;
     width: 100%;
