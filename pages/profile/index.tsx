@@ -3,9 +3,11 @@ import React, { Fragment, useEffect } from 'react';
 //components
 import Router from 'next/router';
 import { Canva, Header } from '../../components';
+import UserDetails from './components/userDetails/UserDetails';
 
 //styles
 import classes from './profile.module.css';
+
 
 function index(props) {
     useEffect(() => {
@@ -26,7 +28,12 @@ function index(props) {
             <Canva>
                 <Header active='profile' />
                 <section className={classes.section}>
-
+                    <div className={classes.mainProfile}>
+                        <UserDetails />
+                        <div className={classes.accountsettings}>
+                            <h3>Account Settings</h3>
+                        </div>
+                    </div>
                 </section>
             </Canva>
         </Fragment>

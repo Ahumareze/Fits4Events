@@ -4,4 +4,24 @@
     padding: 20px 20px;
     overflow: hidden;
     overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.mainProfile{
+    height: 100%;
+    width: 100%;
+}
+.accountsettings{
+    height: 300px;
+    width: 100%;
+    border: 1px solid #fff;
+    margin-top: 30px;
+}
+.accountsettings h3{
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    font-size: 22px;
 }
