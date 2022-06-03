@@ -10,25 +10,37 @@ import { FiCreditCard, FiDollarSign, FiInfo, FiLogOut } from 'react-icons/fi';
 
 //components
 import Router from 'next/router';
-import { Canva, Header } from '../../components';
+import { Canva, Header, link } from '../../components';
 import UserDetails from './components/userDetails/UserDetails';
 import Items from './components/items/Items';
 import Modal from './components/modal/Modal';
+import axios from 'axios';
 
 
 function index(props) {
     //UI state
-    const [modal, setModal] = useState<string>()
+    const [modal, setModal] = useState<string>();
+    const [activeCurrency, setActiveCurrency] = useState('');
 
     useEffect(() => {
         const localId = localStorage.getItem('@fitsUserData');
         if(localId){
             const parsedLocalData = JSON.parse(localId);
-            console.log(parsedLocalData.id)
+            fetchData(parsedLocalData.id)
         }else{
             Router.push('/profile/auth')
         }
-    }, [])
+    }, []);
+
+    const fetchData = (id) => {
+        axios.post(link + '/get-user', {id})
+            .then(r => {
+                localStorage.setItem('@localCurrency', JSON.stringify(r.data.currency))
+                setActiveCurrency(r.data.currency.code)
+        }).catch(e => {
+            console.log('Network error')
+        })
+    }
 
     return (
         <Fragment>
@@ -42,7 +54,7 @@ function index(props) {
                         <UserDetails />
                         <div className={classes.accountsettings}>
                             <h3>Account Settings</h3>
-                            <Items title={'Change Currency (NGN)'} color='#F79D6E' onClick={() => setModal('currency')}>
+                            <Items title={`Change Currency (${activeCurrency})`} color='#F79D6E' onClick={() => setModal('currency')}>
                                 <FiDollarSign />
                             </Items>
                             <Items title={'Add New Payment Card'} color='#4B6AE3' onClick={() => setModal('currency')}>
@@ -62,7 +74,7 @@ function index(props) {
                     </div>
                 </section>
             </Canva>
-            {modal && <Modal />}
+            {modal && <Modal closeModal={() => setModal(null)} />}
         </Fragment>
     );
 }

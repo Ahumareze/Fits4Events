@@ -69,7 +69,7 @@ function index(props) {
         const data = await localStorage.getItem('@Cart');
         if(data){
             const parsedCart = JSON.parse(data);
-            const newCart = [...parsedCart, item];
+            const newCart = [...parsedCart, {...item, quantity: 1}];
             localStorage.setItem('@Cart', JSON.stringify(newCart));
         }else{
             localStorage.setItem('@Cart', JSON.stringify([item]))

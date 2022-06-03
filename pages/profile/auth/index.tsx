@@ -29,7 +29,7 @@ function index(props) {
             fullname: firstName + " " + lastName,
             email,
             password,
-            currency: "USD",
+            currency: {code: 'USD', value: 1},
             history: []
         };
         axios.post(link + '/signup', data).then(r => {
