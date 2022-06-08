@@ -17,7 +17,6 @@
     padding: 10px;
 }
 .titleDiv{
-    height: 40px;
     margin: 10px 0;
 }
 .title{
@@ -27,6 +26,9 @@
     font-weight: 400;
     margin: 0;
     text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .price{
     font-size: 20px;

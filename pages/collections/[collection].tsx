@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 
 //styles
 import classes from './collections.module.css';
@@ -24,6 +24,23 @@ export async function getServerSideProps(context) {
 
 
 function Collection({data, route}) {
+    //state
+    const [filteredPrice, setFilteredPrice] = useState(1000);
+    const [items, setItems] = useState(data);
+
+    useEffect(() => {
+        if(filteredPrice !== 1000){
+            filterItems()
+        }
+    }, [filteredPrice])
+
+    const filterItems = () => {
+        const newArr = data?.filter(i => i.price < filteredPrice);
+        if(newArr.length !== items.length){
+            setItems(newArr)
+        }
+    }
+
     return (
         <Fragment>
             <header>
@@ -32,9 +49,9 @@ function Collection({data, route}) {
             <Canva>
                 <Header active='collections' />
                 <section className={classes.section}>
-                    <SideBar collection={route} />
+                    <SideBar collection={route} filteredPrice={filteredPrice} setFilteredPrice={(e) => setFilteredPrice(e)} />
                     <div className={classes.container}>
-                        {data.map((i: any, idx: number) => (
+                        {items?.map((i: any, idx: number) => (
                             <Item 
                                 data={i}
                                 title={i.name} 

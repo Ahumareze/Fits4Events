@@ -8,8 +8,12 @@ import { US, GB, NG, EU, JP, CD } from 'country-flag-icons/react/3x2'
 
 //components
 import Currency from '../currency/Currency';
+
+//components
 import { CurrencyApiKey, link } from '../../../../components';
 import axios from 'axios';
+
+//icons
 import { FiX } from 'react-icons/fi';
 
 function Modal({closeModal}) {

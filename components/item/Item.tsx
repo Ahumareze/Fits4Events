@@ -5,7 +5,12 @@ import classes from './Item.module.css';
 
 //icons
 import {FiHeart, FiShoppingBag, FiTrash} from 'react-icons/fi';
+
+//components
 import Link from 'next/link';
+import currencyConverter from '../utilities/currencyConverter';
+
+//assets
 const saved = require('../../public/assets/heart.png');
 
 interface ItemProps{
@@ -85,7 +90,7 @@ const Item:FC<ItemProps> = ({data, image, title, price, id, isDelete, removeItem
             <div className={classes.titleDiv}>
                 <p className={classes.title}>{title}</p>
             </div>
-            <p className={classes.price}>${price}</p>
+            <p className={classes.price}>{currencyConverter(price)}</p>
             {bottom}
         </div>
     );

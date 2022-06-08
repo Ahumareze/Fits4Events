@@ -9,7 +9,7 @@ import { FiHeart, FiShoppingBag } from 'react-icons/fi';
 //components
 import {useRouter} from 'next/router';
 import { AddedToCart, Canva, Header, link, Notification } from '../../components';
-import { SizeButtons, Button } from '../../components';
+import { SizeButtons, Button, currencyConverter } from '../../components';
 import axios from 'axios';
 
 export async function getServerSideProps(context) {
@@ -100,7 +100,7 @@ function Product({data}) {
                         </div>
                         <div className={classes.detailsDiv}>
                             <p className={classes.title}>{product?.name}</p>
-                            <p className={classes.price}>${price * quantity}</p>
+                            <p className={classes.price}>{currencyConverter(price * quantity)}</p>
                             {/* <div className={classes.sizeContainer}>
                                 {product?.sizes.map((i: string) => (
                                     <SizeButtons size={i} selected={size === i} select={(e) => setSize(e)} />

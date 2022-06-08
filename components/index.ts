@@ -2,11 +2,9 @@ import Header from "./header/Header";
 import Canva from "./canva/Canva";
 import Button from "./button/Button";
 import Collection from "./collection/Collection";
-import collections from "./utilities/collections";
 import SizeButtons from "./sizeButtons/SizeButtons";
 import Item from "./item/Item";
 import Input from "./input/Input";
-import {link, CurrencyLink, CurrencyApiKey} from "./utilities/api";
 import Notification from "./notification/Notification";
 import EmptyPage from "./emptyPage/EmptyPage";
 
@@ -14,6 +12,10 @@ import EmptyPage from "./emptyPage/EmptyPage";
 import { AddedToCart } from "./animations/Animations";
 import Loader from "./Loader/Loader";
 
+//utilities
+import currencyConverter from "./utilities/currencyConverter";
+import {link, CurrencyLink, CurrencyApiKey} from "./utilities/api";
+import collections from "./utilities/collections";
 
 export {
     Header,
@@ -30,5 +32,6 @@ export {
     AddedToCart,
     Notification,
     EmptyPage,
-    Loader
+    Loader,
+    currencyConverter
 }
