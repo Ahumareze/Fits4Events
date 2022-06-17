@@ -58,7 +58,7 @@ const Item:FC<ItemProps> = ({data, image, title, price, id, isDelete, removeItem
     if(!isDelete){
         button = (
             <div className={classes.favButton}>
-                {!isSaved ? <FiHeart color='#000' size={20} onClick={() => saveItem()} /> : <img src={saved.default.src} />}
+                {!isSaved ? <FiHeart color='#000' size={20} onClick={() => saveItem()} /> : <img alt='hello' src={saved.default.src} />}
             </div>
         )
     }else{
