@@ -16,7 +16,7 @@
     column-gap: 2rem;
 }
 .itemsContainer{
-    height: 100%;
+    height: fit-content;
     width: 100%;
     padding-bottom: 50px;
 }
@@ -71,4 +71,15 @@
 .totalContainer section:focus{
     outline: none;
     border: none;
+}
+@media (max-width: 900px) {
+    .main{
+        display: block;
+        width: 400px;
+    }
+}
+@media (max-width: 450px) {
+    .main{
+        width: 100%;
+    }
 }

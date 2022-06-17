@@ -22,6 +22,12 @@
     background-color: palegreen;
     position: relative;
     top: -30px;
+    font-size: 40px;
+    color: #000;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .mainSection p{
     margin: 0;
@@ -36,4 +42,7 @@
     font-size: 20px;
     opacity: 0.8;
     padding-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }

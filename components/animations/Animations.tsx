@@ -5,9 +5,11 @@ import classes from './Animations.module.css';
 
 //components
 import Lottie from 'react-lottie';
-import addToCartAnimation from './lotties/lf30_editor_6sn3wk1s.json';
 import Link from 'next/link';
-import * as actions from '../../redux/actions';
+
+//animations
+import addToCartAnimation from './lotties/lf30_editor_6sn3wk1s.json';
+import emptyHistoryAnimation from './lotties/lf30_editor_r9verdma.json';
 
 //icons
 import {FiChevronRight} from 'react-icons/fi';
@@ -46,6 +48,27 @@ const AddedToCart = ({closeModal}) => {
     );
 }
 
+const EmptyHistory = () => {
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: emptyHistoryAnimation,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice"
+        }
+    };
+    return(
+        <div>
+            <Lottie
+                options={defaultOptions}
+                height={300}
+                width={300}
+            />
+        </div>
+    )
+}
+
 export {
-    AddedToCart
+    AddedToCart,
+    EmptyHistory
 };

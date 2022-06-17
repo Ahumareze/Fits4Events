@@ -16,12 +16,12 @@ const SideBar:FC<SideBarProps> = ({collection, filteredPrice, setFilteredPrice})
     return (
         <div className={classes.sideBar}>
             <h2>{collection}</h2>
-            <div className={classes.searchBar}>
+            {/* <div className={classes.searchBar}>
                 <input placeholder={`Search ${collection} ...`} />
                 <div className={classes.searchBarIcon}>
                     <FiSearch color='#fff' opacity={0.9} size={22} />
                 </div>
-            </div>
+            </div> */}
             <div className={classes.priceFilterDiv}>
                 <h4>Filter by price</h4>
                 <input 

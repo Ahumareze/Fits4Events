@@ -6,6 +6,7 @@ import classes from './product.module.css';
 //icons
 import { FiHeart, FiShoppingBag } from 'react-icons/fi';
 
+
 //components
 import {useRouter} from 'next/router';
 import { AddedToCart, Canva, Header, link, Notification } from '../../components';
@@ -35,14 +36,13 @@ function Product({data}) {
     const [price, setPrice] = useState<number>(data.price)
 
     const [mainImage, setMainImage] = useState<any>(data.images[0])
-    const [size, setSize] = useState<string>();
+    const [size, setSize] = useState<string>(data.size[0]);
     const [quantity, setQuantity] = useState<number>(1);
     const [updateUi, setUpdateUi] = useState(0);
 
     //UI states
     const [isModal, setIsModal] = useState(false);
     const [alreadyExists, setAlreadyExists] = useState(false);
-
 
     const updateQuantity = (type: string) => {
         if(type === '+'){
@@ -59,7 +59,7 @@ function Product({data}) {
         const cart = await localStorage.getItem('@Cart');
         const parsedCart = JSON.parse(cart);
         if(!cart){
-            const item = {...product, quantity};
+            const item = {...product, quantity, size: size};
             const data = [item]
             localStorage.setItem('@Cart', JSON.stringify(data));
             setIsModal(true);
@@ -67,7 +67,7 @@ function Product({data}) {
             //check cart for existing item
             const isInArray = parsedCart.find(function(el){ return el._id === product._id }) !== undefined;
             if(!isInArray){
-                const item = {...product, price: product.price * quantity,  quantity};
+                const item = {...product, price: product.price * quantity,  quantity, size};
                 const data = [...parsedCart, item];
                 localStorage.setItem('@Cart', JSON.stringify(data));
                 setIsModal(true);
@@ -75,8 +75,6 @@ function Product({data}) {
                 setAlreadyExists(true)
             }
         }
-
-        console.log(parsedCart)
     }
 
     return (
@@ -101,11 +99,11 @@ function Product({data}) {
                         <div className={classes.detailsDiv}>
                             <p className={classes.title}>{product?.name}</p>
                             <p className={classes.price}>{currencyConverter(price * quantity)}</p>
-                            {/* <div className={classes.sizeContainer}>
-                                {product?.sizes.map((i: string) => (
+                            <div className={classes.sizeContainer}>
+                                {product?.size.map((i: string) => (
                                     <SizeButtons size={i} selected={size === i} select={(e) => setSize(e)} />
                                 ))}
-                            </div> */}
+                            </div>
                             <div className={classes.quantity}>
                                 <div className={classes.addBox} onClick={() => updateQuantity('-')}>
                                     <p>-</p>
@@ -121,13 +119,8 @@ function Product({data}) {
                                 <Button onClick={() => addToCart()} text='Add To Bag'>
                                     <FiShoppingBag color='#fff' size={20} />
                                 </Button>
-                                <div className={classes.favButtonContainer}>
-                                    <div className={classes.favButton} onClick={() => addToCart()}>
-                                        <FiHeart color='#000' size={20} />
-                                    </div>
-                                </div>
                             </div>
-                            {alreadyExists && <Notification close={() => setAlreadyExists(false)} />}
+                            {alreadyExists && <Notification details={'Item Already Exists In Bag'} close={() => setAlreadyExists(false)} />}
                         </div>
                     </div>
                 </section>

@@ -2,12 +2,13 @@ import React, { Fragment, useState } from 'react';
 
 //components
 import axios from 'axios';
-import { Header, Input, link, Loader } from '../../../components';
+import { Header, Input, link, Loader, Notification } from '../../../components';
 import Coursel from '../components/coursel/Coursel';
 import Router from 'next/router';
 
 //styles
 import classes from './Auth.module.css';
+import { FiCheck, FiX } from 'react-icons/fi';
 
 
 function index(props) {
@@ -36,7 +37,8 @@ function index(props) {
             authSuccess(r.data)
         }).catch(e => {
             if(e.response){
-                setErrorMessage(e.response.data.message)
+                setErrorMessage(e.response.data.message);
+                console.log('hello')
             }else{
                 setErrorMessage('Network error')
             }
@@ -66,6 +68,19 @@ function index(props) {
     const authSuccess = (data) => {
         localStorage.setItem('@fitsUserData', JSON.stringify(data));
         Router.push('/profile')
+    };
+
+    let passwordChecker = (
+        <div className={classes.passwordChecker}>
+            <FiX /><p>Password too short</p>
+        </div>
+    )
+    if(password.length > 6){
+        passwordChecker = (
+            <div className={classes.passwordChecker2}>
+                <FiCheck /><p>Strong password</p>
+            </div>
+        )
     }
 
     let container;
@@ -77,8 +92,10 @@ function index(props) {
                 <Input title='Last Name' value={lastName} onChange={(e) => setLastName(e)} />
                 <Input title='Email Address' value={email} onChange={(e) => setEmail(e)} />
                 <Input title='Password' value={password} onChange={(e) => setPassword(e)} />
-                {/* <p className={classes.terms}>By signing up you have agreed to our <span>terms and conditions</span></p> */}
+                {passwordChecker}
                 <div className={classes.button} onClick={() => postSignup()}>Sign Up</div>
+                {errorMessage && <Notification close={() => setErrorMessage(null)} details={errorMessage} /> }
+                
                 <p className={classes.account} onClick={() => setIsSignup(false)}>Already have an account? <span>Login</span></p>
             </div>
         )
@@ -90,6 +107,7 @@ function index(props) {
                 <Input title='Password' value={password} onChange={(e) => setPassword(e)} />
                 {/* <p className={classes.terms}>By signing up you have agreed to our <span>terms and conditions</span></p> */}
                 <div className={classes.button} onClick={postLogin}>Sign In</div>
+                {errorMessage && <Notification close={() => setErrorMessage(null)} details={errorMessage} /> }
                 <p className={classes.account} onClick={() => setIsSignup(true)}>Don't have an account? <span>Create account</span></p>
             </div>
         )

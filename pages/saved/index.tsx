@@ -99,7 +99,7 @@ function index(props) {
                                     removeItem={() => removeItem(idx)}
                                     addToCart={() => addToCart(idx) }
                                 />
-                                {alreadyExistsItem === idx && <Notification close={() => setAlreadyExistsItem(null)} />}
+                                {alreadyExistsItem === idx && <Notification details={'Item Already Exists In Bag'} close={() => setAlreadyExistsItem(null)} />}
                             </div>
                         ))}
                         {saved.length === 0 && <EmptyPage saved />}

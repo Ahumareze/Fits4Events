@@ -3,6 +3,11 @@
     width: 100%;
     padding-top: 20px;
 }
+@media (max-width: 900px) {
+    .sideBar{
+        display: none;
+    }
+}
 .sideBar h2{
     color: #fff;
     margin: 0;

@@ -3,15 +3,18 @@ import React from 'react';
 //styles
 import classes from './UserDetails.module.css';
 
-function UserDetails(props) {
+function UserDetails({user}) {
+    console.log(user?.fullname.charAt(0))
     return (
         <div className={classes.container}>
             <div className={classes.containerBackground} />
             <div className={classes.main}>
-                <div className={classes.image} />
+                <div className={classes.image}>
+                    {user?.fullname.charAt(0)}
+                </div>
                 <div className={classes.mainSection}>
-                    <p className={classes.username}>King Shasha</p>
-                    <p className={classes.email}>ahumarezeifeanyi001@gmail.com</p>
+                    <p className={classes.username}>{user?.fullname}</p>
+                    <p className={classes.email}>{user?.email}</p>
                 </div>
             </div>
         </div>

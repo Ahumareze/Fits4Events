@@ -9,7 +9,7 @@ import Notification from "./notification/Notification";
 import EmptyPage from "./emptyPage/EmptyPage";
 
 //animations
-import { AddedToCart } from "./animations/Animations";
+import { AddedToCart, EmptyHistory } from "./animations/Animations";
 import Loader from "./Loader/Loader";
 
 //utilities
@@ -30,6 +30,7 @@ export {
     CurrencyLink,
     CurrencyApiKey,
     AddedToCart,
+    EmptyHistory,
     Notification,
     EmptyPage,
     Loader,

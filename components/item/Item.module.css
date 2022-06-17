@@ -91,3 +91,12 @@
     padding-right: 10px;
     padding-bottom: 2px;
 }
+@media (max-width: 420px) {
+    .item{
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}

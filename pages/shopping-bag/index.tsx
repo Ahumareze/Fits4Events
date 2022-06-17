@@ -5,7 +5,7 @@ import { FiCreditCard } from 'react-icons/fi';
 
 //
 import {useSelector} from 'react-redux';
-import { Button, Canva, EmptyPage, Header } from '../../components';
+import { Button, Canva, currencyConverter, EmptyPage, Header } from '../../components';
 import Items from './components/Items/Items';
 
 //styles
@@ -78,11 +78,11 @@ function index() {
                             <h3>Total</h3>
                             <div className={classes.totalDivs}>
                                 <p className={classes.p1}>Sub-total</p>
-                                <p className={classes.p2}>${total}</p>
+                                <p className={classes.p2}>{currencyConverter(total)}</p>
                             </div>
                             <div className={classes.totalDivs}>
                                 <p className={classes.p1}>Delivery-fee</p>
-                                <p className={classes.p3}>${deliveryFee}</p>
+                                <p className={classes.p3}>{currencyConverter(deliveryFee)}</p>
                             </div>
                             <select onClick={(e) => setDeliveryFee((e.target as HTMLTextAreaElement).value)}>
                                 <option value={15}>Standard delivery outside Nigeria</option>

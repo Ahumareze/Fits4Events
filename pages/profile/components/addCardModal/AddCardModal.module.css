@@ -47,67 +47,15 @@
 .cancleButton:hover{
     background-color: #383838;
 }
-.currencies{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 15px;
-    row-gap: 15px;
-    padding-top: 30px;
-}
-.flag{
-    width: 20px;
-}
-.bottom{
-    width: 100%;
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    align-items: center;
-}
-
-.converter{
+.content{
     font-size: 20px;
     color: #fff;
-    opacity: 1;
-    margin: 0;
-}
-.updateButton{
-    height: 40px;
-    width: 100%;
-    background-color: #F79D6E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.updateButton:hover{
-    background-color: #f88344;
-}
-.updateButton p{
-    font-size: 20px;
-    font-weight: 400;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    padding-right: 10px;
-    padding-bottom: 2px;
+    opacity: 0.8;
 }
 @media (max-width: 550px) {
     .main{
         width: calc(100vw - 30px);
         margin-right: auto;
         margin-left: auto;
-    }
-    .currencies{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        width: 100%;
-    }
-    .bottom{
-        display: block;
-    }
-    .updateButton{
-        margin-top: 20px;
     }
 }
