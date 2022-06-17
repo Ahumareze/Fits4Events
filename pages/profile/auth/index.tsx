@@ -11,7 +11,7 @@ import classes from './Auth.module.css';
 import { FiCheck, FiX } from 'react-icons/fi';
 
 
-function index(props) {
+function Index(props) {
     //UI state
     const [isSignup, setIsSignup] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
@@ -130,4 +130,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default Index;

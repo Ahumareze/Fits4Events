@@ -13,7 +13,7 @@ const Canva:FC<CanvaProps> = ({children}) => {
     return (
         <div className={classes.canva}>
             <div className={classes.mainCanva}>
-                <img src={canva.default.src} />
+                <img src={canva.default.src}  alt='img'/>
             </div>
             <div className={classes.contents}>
                 {children}

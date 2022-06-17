@@ -28,7 +28,7 @@ function Home(props) {
                         <h2>Collections</h2>
                         <div className={classes.collectionsContainer}>
                             {collections.slice(0,4).map((i: any, idx: number) => (
-                                <Collection title={i.title} link={i.link} image={i.img} collectionPage={false} />
+                                <Collection title={i.title} link={i.link} image={i.img} collectionPage={false} key={idx} />
                             ))}
                         </div>
                     </div>

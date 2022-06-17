@@ -9,7 +9,7 @@ import classes from './Button.module.css';
 
 function Button(props) {
     return (
-        <Link href={'/collections'}>
+        <Link href={'/collections'} passHref>
             <div className={classes.button}>
                 <div className={classes.main}>
                     <p>Shop Now</p>

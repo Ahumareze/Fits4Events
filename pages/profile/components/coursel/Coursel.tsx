@@ -14,6 +14,7 @@ function Coursel(props) {
 
     useEffect(() => {
         updateImage();
+        // eslint-disable-next-line
     }, [active])
 
     const updateImage = () => {

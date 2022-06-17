@@ -18,6 +18,9 @@
     color: #fff;
     margin: 0;
 }
+.logoContainer p span{
+    color: #F79D6E;
+}
 .navigationContainer{
     height: 100%;
     width: 100%;

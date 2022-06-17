@@ -23,21 +23,21 @@ function Intro(props) {
                     <p className={classes.description}>We've got every style for every weather, event or mood you're in</p>
                     <div className={classes.introExraDesign}>
                         <Button />
-                        <img src={arrow.default.src} />
+                        <img src={arrow.default.src} alt='img'/>
                     </div>
                 </div>
                 <div className={classes.IntroImages}>
                     <div className={classes.IntroImgDiv1}>
-                        <img src={ball.default.src} className={classes.ball} />
+                        <img src={ball.default.src} className={classes.ball} alt='img' />
                         <div className={classes.main}>
-                            <img src={casual.default.src} />
+                            <img src={casual.default.src} alt='img' />
                             <p>Casual</p>
                         </div>
                     </div>
                     <div className={classes.IntroImgDiv1}>
-                        <img src={x.default.src} className={classes.x} />
+                        <img src={x.default.src} className={classes.x} alt='img' />
                         <div className={classes.main2}>
-                            <img src={formal.default.src} />
+                            <img src={formal.default.src} alt='img' />
                             <p>Formal</p>
                         </div>
                     </div>

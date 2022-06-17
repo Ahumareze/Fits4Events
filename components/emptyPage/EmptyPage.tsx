@@ -31,7 +31,7 @@ function EmptyPage({saved}) {
             />
             <h2>{!saved ? "Empty Bag" : "No Saved Item"}</h2>
             <p className={classes.mainDetails}>{!saved ? 'Sorry it looks like your bag is empty, start adding items to bag to continue.' : 'It looks like you have no saved item, start browsing from our collection'}</p>
-            <Link href={'/collections'}>
+            <Link href={'/collections'} passHref>
                 <div className={classes.mainButton}>
                     <p>Browse Collections</p>
                     <FiChevronRight size={20} />

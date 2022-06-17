@@ -89,19 +89,19 @@ function Product({data}) {
                         <div className={classes.imagesContainer}>
                             <div className={classes.miniImagesContainer}>
                                 {product?.images.map((i: string, idx: number) => (
-                                    <img src={i} onClick={() => setMainImage(i)} key={idx} />
+                                    <img alt='img' src={i} onClick={() => setMainImage(i)} key={idx} />
                                 ))}
                             </div>
                             <div className={classes.largeImageContainer}>
-                                <img src={mainImage} />
+                                <img alt='img' src={mainImage} />
                             </div>
                         </div>
                         <div className={classes.detailsDiv}>
                             <p className={classes.title}>{product?.name}</p>
                             <p className={classes.price}>{currencyConverter(price * quantity)}</p>
                             <div className={classes.sizeContainer}>
-                                {product?.size.map((i: string) => (
-                                    <SizeButtons size={i} selected={size === i} select={(e) => setSize(e)} />
+                                {product?.size.map((i: string, idx: number) => (
+                                    <SizeButtons size={i} selected={size === i} select={(e) => setSize(e)} key={idx}/>
                                 ))}
                             </div>
                             <div className={classes.quantity}>

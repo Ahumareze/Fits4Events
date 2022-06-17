@@ -37,7 +37,7 @@ const AddedToCart = ({closeModal}) => {
                 />
                 <h2>Added To Cart</h2>
                 <p className={classes.mainDetails}>Your Product was successfully added to bag, why not continue exploring our items?</p>
-                <Link href={'/collections'}>
+                <Link href={'/collections'} passHref>
                     <div className={classes.mainButton}>
                         <p>Browse Collections</p>
                         <FiChevronRight size={20} />

@@ -38,7 +38,7 @@ const Item:FC<ItemProps> = ({data, image, title, price, id, isDelete, removeItem
                 setIsSaved(true)
             }
         }
-    }, []);
+    }, [id]);
 
     //add item saved items
     const saveItem = async() => {
@@ -82,7 +82,7 @@ const Item:FC<ItemProps> = ({data, image, title, price, id, isDelete, removeItem
     return (
         <div className={classes.item}>
             <div className={classes.image} style={{backgroundImage: `url(${image})`}}>
-                <Link href={`/product/${title} ${id}`}><div className={classes.itemLink}></div></Link>
+                <Link href={`/product/${title} ${id}`} passHref><div className={classes.itemLink}></div></Link>
                 <div className={classes.favButtonContainer}>
                     {button}
                 </div>

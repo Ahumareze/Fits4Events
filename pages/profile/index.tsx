@@ -19,7 +19,7 @@ import AddCardModal from './components/addCardModal/AddCardModal';
 import AddressModal from './components/addressModal/AddressModal';
 
 
-function index(props) {
+function Index(props) {
     //UI state
     const [modal, setModal] = useState<string>();
     const [addCardModal, setAddCardModal] = useState<boolean>(false);
@@ -97,4 +97,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default Index;

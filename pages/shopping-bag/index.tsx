@@ -11,7 +11,7 @@ import Items from './components/Items/Items';
 //styles
 import classes from './shoppingBag.module.css';
 
-function index() {
+function Index() {
     //state
     const [total, setTotal] = useState(0);
     const [deliveryFee, setDeliveryFee] = useState<any>(15);
@@ -99,4 +99,4 @@ function index() {
     );
 }
 
-export default index;
+export default Index;

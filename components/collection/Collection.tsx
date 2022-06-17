@@ -17,7 +17,7 @@ const Collection:FC<CollectionProps> = ({image, title, link, collectionPage}):JS
     let seeAll = (
         <div className={showHover ? classes.hoverDiv : classes.hoverDivFadeOut}>
             <div className='DeleteDivMain'>
-                <Link href={link}>
+                <Link href={link} passHref>
                     <p>Browse {title}</p>
                 </Link>
             </div>

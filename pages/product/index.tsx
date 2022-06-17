@@ -3,13 +3,13 @@ import React, { useEffect } from 'react';
 //components
 import Router from 'next/router';
 
-function index(props) {
+function Index(props) {
 
     useEffect(() => {
             Router.push('/collections')
     }, [])
 
-    return 
+    return null
 }
 
-export default index;
+export default Index;

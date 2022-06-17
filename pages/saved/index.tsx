@@ -6,7 +6,7 @@ import classes from './saved.module.css';
 //components
 import { Canva, EmptyPage, Header, Item, Notification } from '../../components';
 
-function index(props) {
+function Index(props) {
     //state
     const [saved, setSaved] = useState([]);
     const [removedItem, setRemovedItem] = useState();
@@ -87,14 +87,13 @@ function index(props) {
                     <h3>Saved Items</h3>
                     <div className={classes.container}>
                         {saved.map((i, idx) => (
-                            <div className={`${idx !== removedItem ? classes.mainContainer : classes.slideOut }`}>
+                            <div className={`${idx !== removedItem ? classes.mainContainer : classes.slideOut }`} key={idx}>
                                 <Item 
                                     data={i} 
                                     image={i.images[0]} 
                                     title={i.name} 
                                     price={i.price} 
-                                    id={i._id} 
-                                    key={idx} 
+                                    id={i._id}
                                     isDelete 
                                     removeItem={() => removeItem(idx)}
                                     addToCart={() => addToCart(idx) }
@@ -110,4 +109,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default Index;

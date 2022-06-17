@@ -28,18 +28,21 @@ function Collection({data, route}) {
     const [filteredPrice, setFilteredPrice] = useState(1000);
     const [items, setItems] = useState(data);
 
-    useEffect(() => {
-        if(filteredPrice !== 1000){
-            filterItems()
-        }
-    }, [filteredPrice])
+
+    useEffect(() => (
+        filterItems()
+        // eslint-disable-next-line
+    ), [filteredPrice])
 
     const filterItems = () => {
-        const newArr = data?.filter(i => i.price < filteredPrice);
-        if(newArr.length !== items.length){
-            setItems(newArr)
+        if(filteredPrice !== 1000){
+            const newArr = data?.filter(i => i.price < filteredPrice);
+            if(newArr.length !== items.length){
+                setItems(newArr)
+            }
         }
     }
+
 
     return (
         <Fragment>
