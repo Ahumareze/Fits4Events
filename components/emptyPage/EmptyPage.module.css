@@ -1,0 +1,38 @@
+.container{
+    height: 300px;
+    /* width: 300px; */
+    /* border: 1px solid #fff; */
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.container h2{
+    color: #fff;
+    margin: 0;
+    opacity: 0.8;
+}
+.mainDetails{
+    color: #fff;
+    font-size: 20px;
+    padding: 0 50px;
+    opacity: 0.7;
+}
+.mainButton{
+    height: fit-content;
+    padding-top: 10px;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F79D6E;
+    cursor: pointer;
+    /* border: 1px solid #fff; */
+}
+.mainButton p{
+    margin: 0;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}

@@ -1,0 +1,97 @@
+.container{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.div1{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.div2{
+    height: 100%;
+    width: 100%;
+}
+.form{
+    height: 500px;
+    width: 350px;
+    margin: 0 auto;
+}
+.form h1{
+    color: #fff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.button{
+    height: 40px;
+    width: 100%;
+    background-color: #F79D6E;
+    color: #fff;
+    font-size: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.button:hover{
+    background-color: #f88344;
+}
+.terms{
+    color: #ff4444;
+    margin: 20px 0;
+}
+.terms span, .account span{
+    color: #F79D6E;
+    cursor: pointer;
+}
+.account{
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+@media (max-width: 850px) {
+    .container{
+        display: block;
+    }
+    .div1 {
+        width: 350px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .div2 {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .div1{
+        width: calc(100vw - 30px);
+    }
+}
+.passwordChecker{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    color: #ff4444;
+}
+.passwordChecker p{
+    margin: 0;
+    margin-bottom: 2px;
+    padding-left: 5px;
+}
+.passwordChecker2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(0, 245, 73);
+}
+.passwordChecker2 p{
+    margin: 0;
+    margin-bottom: 2px;
+    padding-left: 5px;
+}

@@ -1,0 +1,129 @@
+.Intro{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.Intro1{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 33% 67%;
+}
+
+.mainIntro{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid palegreen; */
+    animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+    0%{transform: translateY(50vh); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+.mainIntro h1{
+    font-size: 70px;
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
+}
+.mainIntro .description{
+    color: #fff;
+    opacity: 0.7;
+    font-size: 25px;
+    font-weight: 25px;
+    font-weight: 400;
+}
+.introExraDesign{
+    display: flex;
+    flex-direction: row;
+}
+.introExraDesign img{
+    position: relative;
+    top: -50px;
+    right: -100px;
+}
+
+.IntroImages{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation: fadeImages 1.5s ease forwards;
+}
+@keyframes fadeImages {
+    0%{transform: translateY(-300px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
+}
+.IntroImgDiv1{
+    height: 100%;
+    width: 100%;
+}
+.ball{
+    height: 80px;
+    position: relative;
+    bottom: -50px;
+    animation: ball 2s ease-out 0s alternate infinite none running;
+}
+@keyframes ball {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
+.x{
+    height: 80px;
+    position: relative;
+    float: right;
+    padding-right: 70px;
+    animation: x 10s ease-out 0s alternate infinite none running;
+}
+@keyframes x {
+    0%{transform: rotate(90deg); transform-origin: 0% 0%;}
+    100%{transform: rotate(0deg); transform-origin: 0% 0%;}
+}
+.main{
+    width: 70%;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.main:hover, .main2:hover{
+    animation: scale 1s ease forwards;
+}
+.main2{
+    width: 65%;
+    cursor: pointer;
+}
+@keyframes scale {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.05);}
+}
+.main img{
+    width: 100%;
+}
+.main2 img{
+    width: 100%;
+}
+.main p, .main2 p{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+    top: -40px;
+    float: right;
+    padding-right: 15px;
+}
+@media (max-width: 700px) {
+    .Intro1{
+        display: block;
+    }
+    .IntroImages{
+        display: block;
+    }
+    .IntroImgDiv1{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

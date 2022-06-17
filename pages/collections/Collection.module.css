@@ -1,0 +1,24 @@
+.section{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    padding: 20px 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.collections{
+    width: 100vw;
+}
+.collections h2{
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.collectionsContainer{
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}

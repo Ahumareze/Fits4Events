@@ -1,0 +1,55 @@
+.header{
+    height: 50px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    background-color: #1E1E22;
+}
+.logoContainer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    padding-left: 20px;
+}
+.logoContainer p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+.logoContainer p span{
+    color: #F79D6E;
+}
+.navigationContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navigationContainer p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.8;
+    margin: 0;
+    padding-right: 40px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.icons{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid #fff; */
+}
+.icon{
+    opacity: 0.8;
+    padding:0 20px;
+    padding-top: 2px;
+    cursor: pointer;
+}

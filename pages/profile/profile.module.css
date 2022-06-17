@@ -1,0 +1,67 @@
+.section{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding-bottom: 50px;
+}
+.container{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    overflow-y: scroll;
+}
+.mainProfile{
+    height: 100%;
+    width: 100%;
+}
+.accountsettings{
+    height: 300px;
+    width: 100%;
+    /* border: 1px solid #fff; */
+    margin-top: 40px;
+}
+.accountsettings h3, .historyDiv h3{
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.historyDiv h3{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.historyDiv p{
+    margin: 0;
+    color: #fff;
+    margin-top: 5px;
+    font-size: 20px;
+    opacity: 0.7;
+    padding-bottom: 50px;
+}
+@media (max-width: 800px) {
+    .section{
+        width: 100vw;
+        display: block;
+    }
+    .mainProfile, .historyDiv{
+        width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .mainProfile, .historyDiv{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+    }
+}
