@@ -1,5 +1,8 @@
 import Link from 'next/link';
+
+//componet
 import React, {FC, useState} from 'react';
+import Router from 'next/router';
 
 //styles
 import classes from './Collection.module.css';
@@ -17,9 +20,7 @@ const Collection:FC<CollectionProps> = ({image, title, link, collectionPage}):JS
     let seeAll = (
         <div className={showHover ? classes.hoverDiv : classes.hoverDivFadeOut}>
             <div className='DeleteDivMain'>
-                <Link href={link} passHref>
-                    <p>Browse {title}</p>
-                </Link>
+                <p onClick={() => Router.push(link)}>Browse {title}</p>
             </div>
         </div>
     )
@@ -41,6 +42,6 @@ const Collection:FC<CollectionProps> = ({image, title, link, collectionPage}):JS
             } */}
         </div>
     );
-}
+};
 
 export default Collection;

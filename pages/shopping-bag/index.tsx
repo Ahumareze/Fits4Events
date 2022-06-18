@@ -69,7 +69,7 @@ function Index() {
                     <div className={classes.main}>
                         <div className={classes.itemsContainer}>
                             <h3>My Bag</h3>
-                            {cart.map((i,idx) => (
+                            {cart?.map((i,idx) => (
                                 <Items data={{...i, idx: idx}} key={idx} onClick={() => removeItem(idx)} removedItem={removedItem}  />
                             ))}
                             {cart.length === 0 && <EmptyPage saved={false} />}
